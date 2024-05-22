@@ -14,9 +14,37 @@
   flex-direction: row;
   align-items: center ;
   justify-content: space-between;
-
 }
 
+.loadingClass {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* height: 100vh; */
+}
+
+.loadingClass::before {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  width: 5%;
+  height: 5%;
+  border-radius: 50%;
+  border-top: 5px dotted #3498db;
+  border-right: 5px dotted;
+  animation: spinner 0.9s linear infinite;
+}
+
+@keyframes spinner {
+  to {
+      transform: rotate(360deg);
+  }
+}
+.file-upload {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 .uploadPDF{
   margin: 1%;
   padding: 1%;
